@@ -177,13 +177,11 @@ with detection_graph.as_default():
                  to='+17325956989'
               )
            print(message.sid)
-           collect = 0
+           count = 0
            loopTime = 5
            number_of_threats_detected+=1
            create_file = open('number-of-threats.txt', 'w+')
            create_file.write(str("Number of threats stopped: %d\r\n" % (number_of_threats_detected)))
-           arduino()
-           arduino()
        # ans = np.amax(scores)
        # print(ans)
 
