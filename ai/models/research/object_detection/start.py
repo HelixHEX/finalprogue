@@ -23,10 +23,10 @@ import time
 import cv2
 cap = cv2.VideoCapture(0)
 
-
-fourcc = cv2.VideoWriter_fourcc(*'DIVX')
-out = cv2.VideoWriter('output4.mp4',fourcc, 20.0, (1280,720))
-
+#
+# fourcc = cv2.VideoWriter_fourcc(*'DIVX')
+# out = cv2.VideoWriter('output4.mp4',fourcc, 20.0, (1280,720))
+#
 
 # This is needed since the notebook is stored in the object_detection folder.
 sys.path.append("..")
@@ -201,7 +201,7 @@ with detection_graph.as_default():
 
 
 
-       out.write(image_np)
+       # out.write(image_np)
        cv2.imshow('object detection', cv2.resize(image_np, (800,600)))
        if cv2.waitKey(15) & 0xFF == ord('q'):
 
@@ -211,5 +211,5 @@ with detection_graph.as_default():
 
 # Release everything if job is finished
 cap.release()
-out.relase()
+# out.release()
 cv2.destroyAllWindows()

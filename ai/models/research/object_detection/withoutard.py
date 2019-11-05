@@ -97,6 +97,7 @@ category_index = label_map_util.create_category_index(categories)
 
 # ## Helper code
 
+
 # In[8]:
 
 def load_image_into_numpy_array(image):
@@ -158,30 +159,33 @@ with detection_graph.as_default():
           [boxes, scores, classes, num_detections, gunfound],
           feed_dict={image_tensor: image_np_expanded})
        predic = scores[0]
-       print(predic[0])
-       if (predic > 0.50).any():
+       predic = predic[0]
+       predicPerc = int(round(predic * 100))
+       print('Chances that it is a gun: ', predicPerc, '%')
+       if (predic > 0.80).any():
            print('gun found')
            count+=1
-       elif (predic > 0.25).any() and (predic < 0.50).any():
+       elif (predic > 0.50).any() and (predic < 0.80).any():
            print('possible threat')
        else:
            print('no threat')
-       if count == 10:
+       if count == 30:
            account_sid = 'AC4c1c280aaaca67c35eee56cdf73f7a66'
            auth_token = 'e25f674e89bbe95fba2842b6e741aef2'
            client = Client(account_sid, auth_token)
-           message = client.messages \
-              .create(
-                 body='There is gun in the building',
-                 from_='+1938444-8619',
-                 to='+17325956989'
-              )
-           print(message.sid)
+           # message = client.messages \
+           #    .create(
+           #       body='There is gun in the building',
+           #       from_='+1938444-8619',
+           #       to='+17325956989'
+           #    )
+               # print(message.sid)
            count = 0
            loopTime = 5
            number_of_threats_detected+=1
+           number_of_threats_detected = str(number_of_threats_detected)
            create_file = open('number-of-threats.txt', 'w+')
-           create_file.write(str("Number of threats stopped: %d\r\n" % (number_of_threats_detected)))
+           create_file.write(str("Number of threats stopped: %d\r\n", (number_of_threats_detected)))
        # ans = np.amax(scores)
        # print(ans)
 

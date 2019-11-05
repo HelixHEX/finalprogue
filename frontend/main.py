@@ -10,15 +10,15 @@ def success():
     server.starttls()
     server.ehlo()
 
-    server.login('omar.ahmedaf@gmail.com', 'zngnsdiiegrrzhmp')
+    server.login('dandeproductions.contact@gmail.com', 'livelive127**')
 
     subject = "Access granted!"
-    body = 'Hello, \n Access to your software has been granted.\n Download the file below'
+    body = 'Hello, \n Access to your software has been granted.\n Download the file below \n\n \n\n https://drive.google.com/open?id=15FyijU2hGWjXn546KVT7A4aaKIRAyzIV'
 
     msg = f"Subject: {subject}\n\n{body}"
 
     server.sendmail(
-            'omar.ahmedaf@gmail.com',
+            'dandeproductions.contact@gmail.com',
             reciver,
             msg
         )
