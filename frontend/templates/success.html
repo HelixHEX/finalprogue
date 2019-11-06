@@ -12,7 +12,7 @@
 
     header {
       height: 100vh;
-      background: linear-gradient(to right, rgba(29, 209, 161, 0.29), rgba(29, 209, 161, 0.56)), url('https://images.unsplash.com/photo-1565692012121-0201357fc8f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=749&q=80');
+      background: linear-gradient(to right, rgba(29, 209, 161, 0.29), rgba(29, 209, 161, 0.56)), url('https://images.pexels.com/photos/256468/pexels-photo-256468.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -25,7 +25,7 @@
       font-weight: 800;
       text-align: center;
       position: relative;
-      top: 30%;
+      top: 10%;
     }
 
     .boxy {
@@ -106,37 +106,37 @@
       padding-block-start: 300px;
     }
     /*footer classes and ids begin here*/
- 
+
     *{
   padding:0;
   margin:0;
 }
- 
+
 html{
   background-color: #eaf0f2;
   scroll-behavior: smooth;
 }
- 
+
 body{
   font:14px/1.5 Arial, Helvetica, sans-serif;
 }
- 
+
 header{
   text-align: center;
   padding-top: 100px;
   margin-bottom:200px;
 }
- 
+
 header h1{
   font: normal 32px/1.5 'Open Sans', sans-serif;
   color: #3F71AE;
   padding-bottom: 16px;
 }
- 
+
 header h2{
   color: #F05283;
 }
- 
+
 header h2 a{
   color:inherit;
   text-decoration: none;
@@ -147,18 +147,18 @@ header h2 a{
   font: bold 14px/1 'Open Sans', sans-serif;
   text-transform: uppercase;
 }
- 
+
 header h2 a:hover{
   background-color:#F05283;
   transition:0.2s;
   color:#fff;
 }
- 
+
 header ul {
   max-width: 600px;
   margin: 60px auto 0;
 }
- 
+
 header ul a{
   text-decoration: none;
   color: #FFF;
@@ -172,42 +172,42 @@ header ul a{
   margin: 4px;
   line-height: 1;
   outline: none;
- 
+
   transition: 0.2s ease;
 }
- 
+
 header ul li a.active{
   background-color: #66B650;
   pointer-events: none;
 }
- 
+
 header ul li a:hover {
   opacity: 1;
 }
- 
+
 header ul{
   list-style: none;
   padding: 0;
 }
- 
+
 header ul li{
   display: inline-block;
 }
- 
- 
- 
+
+
+
 /* In our demo, the footers are fixed to the bottom of the page */
- 
+
 footer{
   position: fixed;
   bottom: 0;
 }
- 
+
 @media (max-height:800px){
   footer { position: static; }
   header { padding-top:40px; }
 }
- 
+
 .footer-basic-centered{
   background-color: #292c2f;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
@@ -215,23 +215,23 @@ footer{
   width: 100%;
   text-align: center;
   font: normal 18px sans-serif;
- 
+
   padding: 45px;
   margin-top: 80px;
 }
- 
+
 .footer-basic-centered .footer-company-motto{
   color:  #8d9093;
   font-size: 24px;
   margin: 0;
 }
- 
+
 .footer-basic-centered .footer-company-name{
   color:  #8f9296;
   font-size: 14px;
   margin: 0;
 }
- 
+
 .footer-basic-centered .footer-links{
   list-style: none;
   font-weight: bold;
@@ -239,37 +239,41 @@ footer{
   padding: 35px 0 23px;
   margin: 0;
 }
- 
+
 .footer-basic-centered .footer-links a{
   display:inline-block;
   text-decoration: none;
   color: inherit;
 }
- 
+
 /* If you don't want the footer to be responsive, remove these media queries */
- 
+
 @media (max-width: 600px) {
- 
+
   .footer-basic-centered{
     padding: 35px;
   }
- 
+
   .footer-basic-centered .footer-company-motto{
     font-size: 18px;
   }
- 
+
   .footer-basic-centered .footer-company-name{
     font-size: 12px;
   }
- 
+
   .footer-basic-centered .footer-links{
     font-size: 14px;
     padding: 25px 0 20px;
   }
- 
+
   .footer-basic-centered .footer-links a{
     line-height: 1.8;
   }
+}
+#pypo {
+  position: relative;
+  bottom: 45%;
 }
 
   </style>
@@ -277,7 +281,7 @@ footer{
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#"> <img id="lessenlogo" src="https://image.flaticon.com/icons/svg/1104/1104729.svg" alt=""> Progue </a>
+      <a class="navbar-brand" href="/"> <img id="lessenlogo" src="https://image.flaticon.com/icons/svg/1104/1104729.svg" alt=""> Progue </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
        </button>
@@ -294,28 +298,10 @@ footer{
      </nav>
 
      <header>
-        <p id="grabber" class="display-2">Success<br>Thanks for your purchase</p>
-        <img src="https://image.flaticon.com/icons/svg/54/54841.svg" class="checkmark">
+        <p id="grabber" class="display-2">Success!<br>Thanks for your purchase</p>
+      <img id="pypo"src="https://image.flaticon.com/icons/svg/54/54841.svg" class="checkmark">
       </header>
 
-      <footer class="footer-basic-centered">
- 
-        <p class="footer-company-motto">Detect It Before Its Too Late</p>
-       
-        <p class="footer-links">
-          <a href="/">Home</a>
-          ·
-          <a href="/register">Pricing</a>
-          ·
-          <a href="">Mail us: 521 Williams Court Englishtown, NJ 07726</a>
-          ·
-          <a href="https://mail.google.com/mail/u/0/#inbox?compose=new">Email us: generic@gmail.com</a>
-        </p>
-       
-        <p class="footer-company-name">Progue &copy; 2019</p>
-       
-      </footer>
-      
 
 
 </body>

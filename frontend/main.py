@@ -5,20 +5,21 @@ app = Flask(__name__)
 @app.route('/success/', methods=['POST'])
 def success():
     reciver = request.form['eaddress']
+    fullname = request.form['fullname']
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
     server.ehlo()
 
-    server.login('dandeproductions.contact@gmail.com', 'livelive127**')
+    server.login('omar.ahmedaf@gmail.com', 'ercqbjrgwdcenuec')
 
     subject = "Access granted!"
-    body = 'Hello, \n Access to your software has been granted.\n Download the file below \n\n \n\n https://drive.google.com/open?id=15FyijU2hGWjXn546KVT7A4aaKIRAyzIV'
+    body = 'Hello ' + fullname +', \n\n  Access to your software has been granted.\n  Download the file below: \n\n\n https://drive.google.com/drive/folders/15FyijU2hGWjXn546KVT7A4aaKIRAyzIV?usp=sharing'
 
     msg = f"Subject: {subject}\n\n{body}"
 
     server.sendmail(
-            'dandeproductions.contact@gmail.com',
+            'omar.ahmedaf@gmail.com',
             reciver,
             msg
         )
