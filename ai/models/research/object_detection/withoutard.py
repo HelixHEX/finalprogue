@@ -182,7 +182,6 @@ with detection_graph.as_default():
                # print(message.sid)
            count = 0
            loopTime = 5
-           
            # number_of_threats_detected+=1
            # number_of_threats_detected = str(number_of_threats_detected)
            # create_file = open('number-of-threats.txt', 'w+')
